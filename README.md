@@ -10,7 +10,7 @@ Python template system for generating the skeleton of a Python package / Python 
 
 
 Usage:
-	./make.py <module_name> <module_version> <module_author> <module_description> <out_dir> <template_dir>
+	./make.py module_name module_version module_author module_description out_dir template_dir
 	
 
 Templates:
