@@ -30,7 +30,7 @@ try:
 
 	except: 
 	        print "Exception parsing command line args."
-		print "Usage: %s <module_name> <module_version> <module_author> <module_description> <out_dir> <description>" % (sys.argv[0])
+		print "Usage: %s <module_name> <module_version> <module_author> <module_description> <out_dir> <template_dir>" % (sys.argv[0])
         	raise
 
 	def walk_callback(arg, directory, files):
