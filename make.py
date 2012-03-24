@@ -12,13 +12,23 @@ try:
 
 	# Parse command line args here
 	args = sys.argv[1:]
-
-	try:		
+	for a in args:
+		print a
+	print len(args)
+	try:
+		if len(args) < 4:
+			raise Exception('Invalid number of arguments (%d), expected at least 4' % (len(args)))
 		# Build d from args
-		pass
+		d['name'] = args[0]
+		d['version'] = args[1]
+		d['author'] = args[2]
+		d['description'] = args[3]
+
+		if len(args) > 4:
+			outdirectory = args[4]
 	except: 
 	        print "Exception parsing command line args."
-		print "Usage: ........ "
+		print "Usage: %s <module_name> <module_version> <module_author> <module_description> [out_dir]" % (sys.argv[0])
         	raise
 
 	def walk_callback(arg, directory, files):
