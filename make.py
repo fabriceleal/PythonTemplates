@@ -56,7 +56,7 @@ try:
 					# Generate full path for the output file
 					full_t_name = os.path.normpath(os.path.join(outdirectory, t_name))
 					
-					# Ugly, horrendous and non-portable way of taking of the filename of a filename's full path
+					# Ugly, horrendous and non-portable way of taking out the filename from a filename's full path
 					full_dir_name = '/'.join(full_t_name.split('/')[:-1])
 
 					# Create the dir if it doesn't exists
