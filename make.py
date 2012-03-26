@@ -17,6 +17,7 @@ try:
 	try:
 		if len(args) != 6:
 			raise Exception('Invalid number of arguments (%d), expected 6' % (len(args)))
+
 		# Build d from args
 		d['name']        = args[0]
 		d['version']     = args[1]
@@ -67,11 +68,12 @@ try:
 					out = open(full_t_name, 'w')
 					out.write(t_content)			
 				else:
-					pass # Create directory
+					pass # TODO: Create directory
 			except Exception, e:
-				print "Exception file %s at directory %s" % (f, directory)
+				print "Exception parsing file '%s' at directory '%s'" % (f, directory)
 				raise
-			finally:								
+			finally:
+				# Close files
 				if inp != None:
 					inp.close()
 				if out != None:
@@ -82,4 +84,5 @@ try:
 	os.path.walk(template_folder, walk_callback, None)
 	
 except Exception, e:
+	print "Error processing templates, check below for detailed exception info.\n"
 	pprint(sys.exc_info())
