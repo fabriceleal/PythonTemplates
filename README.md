@@ -2,11 +2,11 @@ PythonTemplates
 ===============
 Python template system for generating the skeleton of a Python package / Python C extension project.
 
-"Special" Vars:
- * name: the name of the package / extension
- * version: version of the package / extension
- * author: the author(s) of the package / extension
- * description: description of the package / extension
+ * "Special" Vars:
+     * name: the name of the package / extension
+     * version: version of the package / extension
+     * author: the author(s) of the package / extension
+     * description: description of the package / extension
 
 
 Usage:
